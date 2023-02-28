@@ -72,7 +72,7 @@ if __name__ == '__main__':
     		print("接收到ftp端口号"+args.ftp)
     		cmd = "hydra "+args.url+" ftp -L ./dict/user.txt -P ./dict/pass.txt -s "+args.ftp+" -t "+thread+" -V -f |tee ftp.log"
     	else:
-    		print("使用ssh 默认端口号")
+    		print("使用ftp 默认端口号")
     		cmd = "hydra "+args.url+" ftp -L ./dict/user.txt -P ./dict/pass.txt -t "+thread+" -V -f |tee ftp.log"
     	print("正在执行命令 :" + cmd)
     	res=os.system(cmd)
